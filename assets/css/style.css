@@ -1,0 +1,49 @@
+:root {
+    /* Paleta de Cores Claras Solicitadas [1] */
+    --color-bg: #FAF7F5;           /* Champagne Suave (Fundo Principal) */
+    --color-card: #FFFDFD;         /* Pérola (Cards e Modais) */
+    --color-border: #F2E8E4;       /* Divisor Rosé Suave */
+    --color-text-dark: #2F231F;    /* Chocolate Quente (Títulos e Texto Principal) */
+    --color-text-muted: #8E7A75;   /* Marrom Muted (Subtítulos e Textos Secundários) */
+    --color-rose-gold: #C59B73;    /* Rose Gold (Destaques e Títulos Secundários) */
+    --color-blush: #E1A899;        /* Blush (Botão Secundário e Pontos Ativos) */
+    --color-blush-hover: #CE9485;  /* Blush Escurecido (Efeito de Hover) */
+    --color-white: #FFFFFF;        /* Branco Puro */
+    
+    /* Configurações Tipográficas */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+/* RESET DE CSS E CONFIGURAÇÕES DO BODY */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    webkit-font-smoothing: antialiased;
+}
+
+/* Classes utilitarias fundamentais */
+.bg-light-theme{
+    background-color: var(--color-bg);
+}
+.font-serif{
+    font-family: var(--font-serif);
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+.hidden {
+    display: none !important;
+}

@@ -15,33 +15,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
-<body class="">
+<body class="bg-light-theme">
     <!-- CONTEUDO PRINCIPAL -->
-    <main>
+    <main class="welcome-wrapper">
     <!-- Tela de Introdução (Video De Retrospectiva ou Boas Vindas) -->
-     <div id="welcomeScreen" class="">
-        <div class="">
-            <span class="">Lembrança Viva • Lumora </span>
-            <h1 class="">Beatriz Vasconcelos</h1>
-            <p class="">Seja Bem-vindo. Antes de Explorar o memorial, assista meu video de boas vindas da minha festa.</p>
-            <div class="">
-                <video id="retroVideo" class="" controls preload="metadata">
+     <div id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-container">
+            <span class="welcome-tag">Lembrança Viva • Lumora </span>
+            <h1 class="welcome-title font-serif">Beatriz Vasconcelos</h1>
+            <p class="welcome-text">Seja Bem-vindo. Antes de Explorar o memorial, assista meu video de boas vindas da minha festa.</p>
+            <div class="welcome-video-wrapper">
+                <video id="retroVideo" class="welcome-video" controls preload="metadata">
                     <source src="">
                 </video>
             </div>
-            <div class="">
-                <button class="">
-                    <a href="assets/pages/memorial.html"> Explorar Memorial</a>
-                </button>
+            <div class="welcome-btn-container">        
+                <a href="assets/pages/memorial.html" class="btn-primary uppercase tracking-wide"> Explorar Memorial</a>
             </div>
         </div>
      </div>
     </main>
     <!-- RODAPÉ -->
-    <footer class="">
+    <footer class="discreet-footer">
         <p>&copy; MDL • Memorial Digital Lumora</p>
     </footer>
 </body>
