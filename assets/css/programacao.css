@@ -10,6 +10,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-rose-gold);
+    margin-top: 23px;
 }
 .timeline-container{
     position: relative;
