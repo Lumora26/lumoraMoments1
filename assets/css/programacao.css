@@ -1,70 +1,82 @@
-.timeline-setion{
-    margin-top: 3rem;
+
+   /* 7. LINHA DO TEMPO DA PROGRAMAÇÃO (VERTICAL E INTERATIVA) */
+  
+.timeline-section {
+    margin-top: 4rem; /* Aumentado o espaçamento superior da seção */
 }
-.section-title{
+
+.section-title {
     font-size: 0.875rem;
     font-weight: 500;
-    border-bottom: 1ps solid var(--color-border);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border); /* CORRIGIDO: de 1ps para 1px */
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-rose-gold);
     margin-top: 23px;
 }
-.timeline-container{
+
+.timeline-container {
     position: relative;
-    padding-left: 2rem;
-    border-left: 1px solid var(--color-rose-gold);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-left: 2.25rem; /* Aumentado para dar mais espaço em relação à linha */
+    border-left: 1px solid var(--color-rose-gold); /* Linha principal na cor Rose Gold */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 /* CARD DESLIZANTE FLUTUANTE */
-.sliding-card{
+.sliding-card {
     position: absolute;
     left: 0.5rem;
     right: 0;
     background-color: var(--color-card);
     border: 1px solid rgba(225, 168, 153, 0.4);
     border-radius: 1rem;
-    z-index: 1;
+    z-index: 1; /* Fica na camada 1 (atrás do texto) */
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0 20px 2px rgba(225, 168, 153, 0.15);
-    pointer-events: none;
-}
-.timeline-noide{
-    position: relative;
-    padding: 1rem;
-    transition: all 0.5s ease;
-    z-index: 5;
-}
-.bullet{
-    position: absolute;
-    left: -35px;
-    top: 27px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--color-rose-gold);
-    transition: all 0.7 ease-in-out;
+    pointer-events: none; /* Garante que o card não bloqueie os cliques da tela */
 }
 
-/* classes aplicadas via JS para destacar o item ativo */
-.bullet-active{
-    left: -41px;
-    top: 24px;
+/* CORRIGIDO: Alterado de .timeline-noide para .timeline-node */
+.timeline-node {
+    position: relative; /* Necessário para o z-index funcionar */
+    padding: 1.25rem 1rem; /* Aumentado o padding para o card ficar maior e mais imponente */
+    margin-bottom: 0.5rem; /* Espaço entre os momentos */
+    transition: all 0.5s ease;
+    z-index: 5; /* Fica na camada 5 (na frente do sliding-card que está na camada 1) */
+}
+
+.bullet {
+    position: absolute;
+    left: -41px; /* Alinhamento centralizado na linha esquerda */
+    top: 30px;
+    width: 10px; /* Aumentado ligeiramente para melhor visualização */
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-rose-gold);
+    transition: all 0.7s ease-in-out; /* CORRIGIDO: Adicionado o "s" em 0.7s */
+    z-index: 10; /* Fica por cima de tudo */
+}
+
+/* CORRIGIDO: Alterado de .bullet-active para .bullet.active para sincronizar com o JS */
+.bullet.active {
+    left: -44px; /* Ajuste de centralização do ponto maior */
+    top: 27px;
     width: 16px;
     height: 16px;
     background-color: var(--color-white);
-    border:  4px solid var(--color-blush);
+    border: 4px solid var(--color-blush);
     box-shadow: 0 0 0 4px rgba(225, 168, 153, 0.15);
 }
-.node-content{
+
+.node-content {
     display: flex;
     flex-direction: column;
 }
-.label-text{
+
+.label-text {
     font-size: 0.5625rem;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -72,29 +84,35 @@
     color: var(--color-text-muted);
     transition: color 0.5s ease;
 }
-.label-text.active{
-    color: var(--color-blush);
+
+.label-text.active {
+    color: var(--color-blush); /* Acende a cor do texto do horário */
 }
-.node-title{
+
+.node-title {
     font-size: 0.75rem;
     font-weight: 500;
     color: var(--color-text-dark);
     margin-top: 0.125rem;
     transition: font-weight 0.5s ease;
 }
-.node-title.active{
-    font-weight: 700;
+
+.node-title.active {
+    font-weight: 700; /* Negrita o título do momento ativo */
 }
-.node-desc{
+
+.node-desc {
     font-size: 0.6875rem;
     color: var(--color-text-muted);
     margin-top: 0.25rem;
     line-height: 1.625;
+    opacity: 0.5;
     transform: scale(0.95);
     transform-origin: left;
     transition: all 0.5s ease;
 }
-.node-desc.active{
-    opacity: 1;
+
+.node-desc.active {
+    opacity: 1; /* Dá brilho total na descrição ativa */
     transform: scale(1);
 }

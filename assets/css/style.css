@@ -15,31 +15,36 @@
     --font-sans: 'Inter', sans-serif;
 }
 
-/* RESET DE CSS E CONFIGURAÇÕES DO BODY */
-*{
+/* ==========================================================================
+   2. RESET DE CSS E CONFIGURAÇÕES DO BODY
+   ========================================================================== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: var(--color-bg);
-    color: var(--color-text-dark);
+    color: var(--color-text-dark); /* Texto escuro por conta do fundo claro [1] */
     font-family: var(--font-sans);
     line-height: 1.5;
-    webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Classes utilitarias fundamentais */
-.bg-light-theme{
+/* Classes utilitárias fundamentais */
+.bg-light-theme {
     background-color: var(--color-bg);
 }
-.font-serif{
+
+.font-serif {
     font-family: var(--font-serif);
 }
-.uppercase{
+
+.uppercase {
     text-transform: uppercase;
 }
+
 .tracking-wide {
     letter-spacing: 0.05em;
 }
