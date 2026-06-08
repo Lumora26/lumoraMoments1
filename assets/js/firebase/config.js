@@ -1,14 +1,15 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
 
 // Cole as credenciais do console do seu projeto Firebase abaixo
 const firebaseConfig = {
-    apiKey: "SUA_API_KEY",
-    authDomain: "seu-projeto.firebaseapp.com",
-    projectId: "seu-projeto",
-    storageBucket: "seu-projeto.appspot.com",
-    messagingSenderId: "seu-sender-id",
-    appId: "seu-app-id"
+  apiKey: "AIzaSyAKR-i0mngk6DImCTzv7YCE-ubgK7gMj4Y",
+  authDomain: "lumoramoments1.firebaseapp.com",
+  projectId: "lumoramoments1",
+  storageBucket: "lumoramoments1.firebasestorage.app",
+  messagingSenderId: "444655488382",
+  appId: "1:444655488382:web:991fbad19330cde358b72f",
+  measurementId: "G-EGRC5WNG4W"
 };
 
 // Inicializa a aplicação Firebase

@@ -1,6 +1,7 @@
 import { db } from '../firebase/config.js';
-import { collection, addDoc, query, where, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { collection, addDoc, query, where, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
 import { openLightbox } from '../utils/lightbox.js';
+console.log("DB:", db);
 
 let selectedImageBase64 = ""; // Armazena a foto ativa em formato Base64 para envio
 const EVENTO_ID = "bia-15anos"; // Identificador exclusivo desta festa para separar dados no banco
@@ -10,10 +11,12 @@ const EVENTO_ID = "bia-15anos"; // Identificador exclusivo desta festa para sepa
  * Caso qualquer pessoa envie uma mensagem, a tela de todos atualiza na hora sem recarregar.
  */
 export function inicializarMuralRealTime() {
+    console.log("Firestore conectado:", db)
     const q = query(
         collection(db, "mensagens"),
         where("eventoId", "==", EVENTO_ID),
-        orderBy("createdAt", "desc") // Exibe as mensagens mais recentes no topo
+        orderBy("createdAt", "desc"), // Exibe as mensagens mais recentes no topo
+
     );
 
     // O onSnapshot age como uma escuta ativa na nuvem do Firebase
